@@ -2,6 +2,7 @@ using Data;
 using Data.Models.Interfaces;
 using BlazorWebApp.Client.Pages;
 using BlazorWebApp.Components;
+using SharedComponents.Pages;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -45,6 +46,6 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode()
     .AddInteractiveWebAssemblyRenderMode()
     .AddAdditionalAssemblies(typeof(Counter).Assembly)
-    .AddAdditionalAssemblies(typeof(SharedComponents.Home).Assembly);
+    .AddAdditionalAssemblies(typeof(SharedComponents.Pages.Home).Assembly);
 
 app.Run();
